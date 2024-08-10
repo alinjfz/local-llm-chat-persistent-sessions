@@ -16,7 +16,7 @@ function App() {
   const [conversation, setConversation] = useState([]);
   const [conversations, setConversations] = useState([]);
   const [error, setError] = useState(null);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selectedConversationId, setSelectedConversationId] = useState(null);
 
   useEffect(() => {
