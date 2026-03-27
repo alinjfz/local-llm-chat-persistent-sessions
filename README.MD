@@ -117,7 +117,7 @@ cd slm_alij
 ### 2. Set up the Python backend
 
 ```bash
-cd slm_back
+cd backend
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -126,7 +126,7 @@ pip install -r requirements.txt
 ### 3. Install the React frontend dependencies
 
 ```bash
-cd ../slm_front
+cd ../frontend
 npm install
 ```
 
@@ -146,10 +146,10 @@ Or start each service manually in separate terminals:
 ollama serve
 
 # Terminal 2 — Flask backend
-cd slm_back && source venv/bin/activate && python server.py
+cd backend && source venv/bin/activate && python server.py
 
 # Terminal 3 — React frontend
-cd slm_front && npm start
+cd frontend && npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -191,7 +191,7 @@ slm_alij/
 ├── README.md
 ├── LICENSE
 │
-├── slm_back/                       # Flask REST API
+├── backend/                       # Flask REST API
 │   ├── server.py                   # Entry point — creates and runs the Flask app
 │   ├── requirements.txt
 │   └── app/
@@ -201,7 +201,7 @@ slm_alij/
 │       └── static/
 │           └── conversations.json  # Persistent conversation store
 │
-├── slm_front/                      # React frontend
+├── frontend/                      # React frontend
 │   ├── package.json
 │   ├── public/
 │   │   ├── index.html
@@ -229,11 +229,11 @@ The application runs on fixed localhost ports by default:
 
 | Service | Default Port | Configured In |
 |---|---|---|
-| React dev server | 3000 | `slm_front/package.json` |
-| Flask API | 5000 | `slm_back/server.py` |
-| Ollama | 11434 | `slm_back/app/routes.py` |
+| React dev server | 3000 | `frontend/package.json` |
+| Flask API | 5000 | `backend/server.py` |
+| Ollama | 11434 | `backend/app/routes.py` |
 
-To swap to a different model, update the `"model"` field and `EXTERNAL_API_URL` in [slm_back/app/routes.py](slm_back/app/routes.py):
+To swap to a different model, update the `"model"` field and `EXTERNAL_API_URL` in [backend/app/routes.py](backend/app/routes.py):
 
 ```python
 EXTERNAL_API_URL = "http://0.0.0.0:11434/api/chat"

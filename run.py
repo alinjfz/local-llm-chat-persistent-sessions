@@ -2,10 +2,10 @@ import subprocess
 import os
 
 def run_flask():
-    os.system('python slm_back/server.py')
+    os.system('python backend/server.py')
 
 def run_react():
-    subprocess.Popen(['npm', 'start'], cwd='slm_front')
+    subprocess.Popen(['npm', 'start'], cwd='frontend')
 
 def run_llama():
     subprocess.Popen(['ollama', 'run', 'llama3.1:8b'])

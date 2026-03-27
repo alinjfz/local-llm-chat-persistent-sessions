@@ -2,28 +2,27 @@
 /__pycache__
 **/__pycache__
 /.vscode
-/slm_back/.venv
-/slm_back/venv
-/slm_front/node_modules
+/backend/.venv
+/backend/venv
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.js
 
 # user data — do not commit conversation history
-/slm_back/app/static/conversations.json
-/slm_front/.pnp
-/slm_front/.pnp.js
+/backend/app/static/conversations.json
+
 # testing
+/frontend/coverage
 
 # misc
 .DS_Store
-/slm_front/.env.local
-/slm_front/.env.development.local
-/slm_front/.env.test.local
-/slm_front/.env.production.local
-/slm_front/npm-debug.log*
-/slm_front/yarn-debug.log*
-/slm_front/yarn-error.log*
-
-# testing
-/slm_front/coverage
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
 
 # production
-/slm_front/build
+/frontend/build
