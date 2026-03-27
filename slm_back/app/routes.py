@@ -235,6 +235,6 @@ def save_conversation():
 def delete_conversation():
     conversation_id = request.args.get('id')
     conversations = load_conversations()
-    conversations = [c for c in conversations if c['id'] != conversation_id]
+    conversations = [c for c in conversations if str(c['id']) != conversation_id]
     save_conversations(conversations)
     return jsonify({'success': True})

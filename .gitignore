@@ -1,8 +1,13 @@
 # dependencies and cache
 /__pycache__
+**/__pycache__
 /.vscode
 /slm_back/.venv
+/slm_back/venv
 /slm_front/node_modules
+
+# user data — do not commit conversation history
+/slm_back/app/static/conversations.json
 /slm_front/.pnp
 /slm_front/.pnp.js
 # testing

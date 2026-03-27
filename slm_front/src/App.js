@@ -66,7 +66,6 @@ function App() {
       setError(err.message);
     }
   };
-  // deleting does not work right now
   const handleDeleteConversation = async (id) => {
     try {
       await deleteConversation(id);
