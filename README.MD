@@ -110,8 +110,8 @@ ollama pull llama3.1:8b
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/alinjfz/slm_alij.git
-cd slm_alij
+git clone https://github.com/alinjfz/local-llm-chat-persistent-sessions.git
+cd local-llm-chat-persistent-sessions
 ```
 
 ### 2. Set up the Python backend
@@ -186,7 +186,7 @@ All endpoints are prefixed with `/api`.
 ## Project Structure
 
 ```
-slm_alij/
+local-llm-chat-persistent-sessions/
 ├── run.py                          # Launcher: starts Ollama + Flask + React
 ├── README.md
 ├── LICENSE
