@@ -32,17 +32,17 @@ This application lets you have rich, multi-turn conversations with the **Llama 3
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    Browser  (localhost:3000)                     │
-│                                                                  │
+┌────────────────────────────────────────────────────────────────┐
+│                    Browser  (localhost:3000)                   │
+│                                                                │
 │  ┌─────────────┐  ┌───────────┐  ┌──────────┐  ┌────────────┐  │
 │  │   App.js    │  │ ChatBox   │  │ Sidebar  │  │ ErrorAlert │  │
 │  │ (State &    │  │ (Messages │  │ (Session │  │ (Banners)  │  │
 │  │ Handlers)   │  │ & Input)  │  │  List)   │  │            │  │
 │  └──────┬──────┘  └───────────┘  └──────────┘  └────────────┘  │
-│         │                                                        │
-│         │  apiService.js (Fetch API)                            │
-└─────────┼────────────────────────────────────────────────────────┘
+│         │                                                      │
+│         │  apiService.js (Fetch API)                           │
+└─────────┼──────────────────────────────────────────────────────┘
           │ HTTP
           ▼
 ┌─────────────────────────────────┐
@@ -59,7 +59,7 @@ This application lets you have rich, multi-turn conversations with the **Llama 3
                ▼
 ┌──────────────────────────────────────┐
 │   Ollama  (localhost:11434)          │
-│   Llama 3.1:8b — local inference    │
+│   Llama 3.1:8b — local inference     │
 └──────────────────────────────────────┘
 ```
 
